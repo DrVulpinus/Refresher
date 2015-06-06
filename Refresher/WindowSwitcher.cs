@@ -19,6 +19,10 @@ namespace Refresher
         Process targetProcess;
         Process originProcess;
         Form homeForm;
+        public WindowSwitcher()
+        {
+         
+        }
         public WindowSwitcher(Form _homeForm)
         {
             homeForm = _homeForm;
