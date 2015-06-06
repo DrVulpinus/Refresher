@@ -61,6 +61,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EventHandler.cs" />
+    <Compile Include="EventTimer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="KeysEvent.cs" />
     <Compile Include="KeySender.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
