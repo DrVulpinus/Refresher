@@ -80,7 +80,7 @@
             this.Controls.Add(this.btn_StartRefreshing);
             this.Controls.Add(this.btn_SetTargetWindow);
             this.Name = "MainForm";
-            this.Text = "Form1";
+            this.Text = "Refresher";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.ResumeLayout(false);
 
