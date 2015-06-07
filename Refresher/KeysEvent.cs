@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace Refresher
 {
-    class KeysEvent
+    public class KeysEvent : MasterEvent
     {
         public String keys { get; set; }
-        public Process targetProcess { get; set; }
-        public long interval { get; set; }
+        
+        public KeySender keySender;
         public KeysEvent()
         {
 
@@ -20,12 +20,19 @@ namespace Refresher
         {
             keys = _keys;
             interval = _interval;
+            keySender = new KeySender();
         }
         public KeysEvent(String _keys, long _interval, Process _targetProcess)
-        {
+        {            
             keys = _keys;
             interval = _interval;
             targetProcess = _targetProcess;
+            keySender = new KeySender();
+        }
+
+        public override void executeEvent()
+        {
+            keySender.sendKeys(keys);
         }
        
         

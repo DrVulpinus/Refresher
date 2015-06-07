@@ -9,13 +9,13 @@ namespace Refresher
 {
     public partial class EventTimer : Timer
     {
-        public KeysEvent timedEvent { get; set; }
-        public EventTimer(KeysEvent _timedEvent)
+        public MasterEvent timedEvent { get; set; }
+        public EventTimer(MasterEvent _timedEvent)
         {
             timedEvent = _timedEvent;
             Interval = timedEvent.interval;
             AutoReset = true;
-            
+            Enabled = true;
         }
         
     }

@@ -7,7 +7,7 @@ using System.Windows.Input;
 
 namespace Refresher
 {
-    class KeySender
+    public class KeySender
     {
         public KeySender()
         {
@@ -15,7 +15,7 @@ namespace Refresher
         }
         public void sendKeys(String keys)
         {
-            System.Windows.Forms.SendKeys.Send(keys);
+            System.Windows.Forms.SendKeys.SendWait(keys);
         }
         public void sendFKey(int number)
         {
